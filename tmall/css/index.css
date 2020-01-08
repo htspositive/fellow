@@ -1,0 +1,363 @@
+.banner{
+    background: #fe0036;
+}
+.banner img{
+    width: 990px;
+    height: 80px;
+    margin:0 auto;
+    display: block;
+}
+.header{
+    height:41px;
+    /* border-bottom:1px solid #e5e5e5; */
+    background:#d91e1c  ; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+
+.header-login{
+    float: left;
+}
+.header-info{
+    float: right;
+}
+.header-login span,.header-login a{
+    color:#fff;
+    margin-right:20px;
+    line-height: 32px;
+}
+/* header info开始 */
+.header-info > li{ 
+    float: left;
+    /* background: green;
+    border:1px solid #000; */
+    padding: 0 14px 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+.header-info .main-menu{
+    border:1px solid #d91e1c;
+}
+
+/* lihover的时候 自己的背景变色 */
+.header-info .main-menu:hover{
+    background: #fff;
+    border:1px solid #f2f2f2;
+    border-bottom: 1px solid pink;
+}
+/* lihover的时候 里边的a元素文字变色 */
+.header-info .main-menu:hover > a{
+    color: #ff0036;
+}
+/* lihover的时候 里边箭头旋转180度 */
+.header-info .main-menu:hover .arrow{
+    transform: rotate(180deg);
+}
+.header-info .main-menu:hover .sub-menu{
+    display: block;
+}
+.header-info .main-menu:hover::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background:#fff;
+    position: absolute;
+    top:32px;
+    left:0px;
+}
+.header-info > li > a{
+    color:#fff;
+    /* font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif; */
+    line-height: 32px;
+}
+.header .arrow{
+    width: 0;
+    height: 0;
+    border:3px solid transparent;
+    border-top:3px solid #bbbbbb;
+    position: absolute;
+    right:5px;
+    top:16px;
+    transition: transform 0.3s ease;
+    transform-origin: 50% 25%;
+}
+
+.header-info .sub-menu{
+    width:73px;
+    position: absolute;
+    top:32px;
+    left:-1px;
+    padding: 8px 10px;
+    border: 1px solid #f2f2f2;
+    background: #fff;
+    display: none;
+
+}
+.header-info .sub-menu li{
+    height: 34px;
+    line-height: 34px;
+}
+.header-info .sub-menu li a{
+    color: #666;
+}
+.header-info .sub-menu li:hover a{
+    color: #ff0036;
+}
+/* 修改字体图标大小 */
+.header-shouji{
+    font-size: 12px;
+}
+.icon-gouwuche{
+    font-size: 14px;
+    /* color: #fe0036; */
+    font-weight: 700;
+}
+.menu-hover:hover a{
+    color: #ffe013;
+    text-decoration: none;
+}
+/* header info结束 */
+/* search开始 */
+.logo{
+    float: left;
+    position: relative;
+    left:-45px;
+    top:6px;
+}
+.search{
+    float: left;
+    margin-left:30px;
+    width: 625px;
+    height: 40px;
+    border:2px solid #ff0036;
+    margin-top:40px;
+}
+.search input{
+    width: 491px;
+    height: 30px;
+    border:none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    float: left;
+}
+.search button{
+    width: 124px;
+    height: 40px;
+    background: #ff0036;
+    text-align: center;
+    line-height: 40px;
+    border:none;
+    color: #fff;
+    font-size: 18px;
+    float: left;
+    font-weight: 700;
+    /* 字符之间空隙 */
+    letter-spacing: 5px;
+}
+/* search结束 */
+/* nav开始 */
+
+.nav li{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+}
+.nav li:first-child{
+    margin-left:200px;
+}
+.nav img{
+    width: 100px;
+    height: 30px;
+    margin-top: 2px;
+}
+.nav a{
+    color:#333;
+    font-size: 16px;
+    padding: 0 8px;
+    font-weight: bold;
+}
+/* nav结束 */
+/* 轮播图开始 */
+body{
+    background: url(../images/bg.png) center 83px no-repeat;
+}
+.slider{
+    /* height: 300px; */
+    background: #eeeeee;
+    position: relative;
+}
+.category{
+    width: 200px;
+    /* 浮动半脱离文档流   */
+    /* float: left; */
+    /* 全脱离文档流 */
+    position: absolute;
+    left:0px;
+    top:-35px;
+    height:535px;
+    background: rgba(0,0,0,.55);
+}
+.slider-box{
+    /* background: #0000ff; */
+    height: 500px;
+    overflow: hidden;
+}
+.slider-box img{
+    width: 1230px;
+}
+.cate-title{
+    background: #eee;
+    color:#DD2727;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: normal;
+    padding-left:20px;
+}
+/* .cate-content{
+    background: rgba(0,0,0,.55);
+} */
+.cate-content > li{
+    height: 31px;
+    line-height: 31px;
+    cursor: pointer;
+}
+
+.cata-list > a{
+    color:#fff;
+    font-size: 14px;
+}
+.cata-list > a:hover{
+    text-decoration: none;
+}
+.cata-list > span{
+    /* color: rgba(255,255,255,0.5) */
+    color: #fff;
+    opacity: 0.5;
+    margin:0 10px 0 20px;
+}
+.cata-list:hover{
+    background: #fff;
+}
+.cate-nvzhuang:hover > a,.cate-nvzhuang:hover > span{
+    color: #e54077;
+}
+.cate-nanzhuang:hover > a,.cate-nanzhuang:hover > span{
+    color: #ffe013;
+}
+.cate-content{
+    position: relative;
+}
+.sub-category{
+    background: #fff;
+    position: absolute;
+    left:200px;
+    top:0px;
+    height: 500px;
+    width:852px;
+    display: none;
+}
+.cata-list:hover  .sub-category{
+    display: block;
+}
+.cate-left{
+    width: 644px;
+    float: left;
+    /* background: #ff0000; */
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+.cate-right{
+    width:208px;
+    float:right;
+    background: #00ff00;
+}
+.cate-left-title{
+    width: 104px;
+    float: left;
+    color:#333;
+    font-size: 14px;
+    font-weight: 700;
+}
+.cate-left-content{
+    width:500px;
+    float: left;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 7px;
+}
+.cate-left-content a{
+    color:#666;
+    font-size: 14px;
+    margin-left:13px;
+    line-height: 22px;
+    height:22px;
+    float: left;
+}
+.cate-row{
+    margin: 10px 0;
+}
+.cate-right{
+    background: #eee;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.cate-right-content{
+    background: #ffffff;
+}
+.cate-right-content a{
+    width: 50%;
+    float: left;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    box-sizing: border-box;
+}
+.cate-right-content img{
+    width:100%;
+    display: block;
+}
+/* 轮播图结束 */
+/* 年货节 */
+/* 行元素和行级块 可以通过设置父元素的text-align:center 居中  */
+.year-good-title{
+    display: block;
+    height: 105px;
+    text-align: center;
+}
+.year-good-title img{
+    width:300px;
+    height:65px;
+    margin-top:20px;
+}
+.year-good-list{
+    width:610px;
+    height:330px;
+    background: #ff0000;
+}
+.page-item-first{
+    text-align: center;
+    width:250px;
+    height:330px;
+    /* background: #fff8c2; */
+    background: url(../images/good-bg.png);
+    border-radius: 5px ;
+}
+.pate-item-title{
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff520c;
+    /* margin-top:32px; */
+    padding-top:32px;
+    /* text-align: center; */
+
+}
+.page-item-desc{
+    font-size: 18px;
+    color: #ff520c;
+    margin-bottom: 20px;
+}
+.page-item-img{
+    width:180px;
+    height:180px;
+}
