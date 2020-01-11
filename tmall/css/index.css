@@ -181,7 +181,8 @@
 /* nav结束 */
 /* 轮播图开始 */
 body{
-    background: url(../images/bg.png) center 83px no-repeat;
+    background: url(../images/bg.png) rgba(245, 245, 245, 1) center 83px no-repeat;
+
 }
 .slider{
     /* height: 300px; */
@@ -450,7 +451,6 @@ body{
 }
 .brand-title{
     float: left;
-    margin-left: 140px;
     width: 234px;
     text-align: center;
     background: #ffffff;
@@ -494,8 +494,207 @@ body{
 }
 .brand-wall-1{
     text-align: center;
-}
-.brand-wall-1-img{
     width: 122px;
     height: 108px;
+    position: relative;
+    background: #ffffff;
+    float: left;
+    margin-right: 1px;
+    margin-top: 2px;
+}
+.brand-wall-1-img{
+    margin-top: 20px;
+    width:100px;
+    height:50px;
+
+}
+.brand-wall-1-jump{
+    width: 122px;
+    height: 108px;
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    top:0px;
+    left: 0px;
+    /* display: none; */
+    opacity: 0;
+}
+.brand-wall-p{
+    padding-top: 30px;
+    font-size: larger;
+    font-weight: 900;
+    color: #eeeeee; 
+}
+.brand-wall-button{
+    color: #ffffff;
+    font-size: 12px;
+    margin-top: 5px;
+    border-radius: 9px;
+    width: 63px;
+    height: 18px;
+    background: #ff0036;
+    border: none;
+}
+.brand-wall-1:hover .brand-wall-1-jump{
+    /* display: block; */
+    opacity: 1;
+     /* 过度 */
+     transition: opacity 0.7s ease;
+}
+
+/* 天猫超市 */
+.market11{
+    margin: 20px 145px ;
+    width: 1230px;
+}
+.market{
+    margin-top: 20px;
+    width: 100%;
+    height: 665px;
+    position: relative;
+}
+.market-logotitle{
+    margin-top: 30px;
+    margin-bottom: 8px;
+    width: 214px;
+    height: 25px;  
+}
+.market-imglogo{
+    width: 214px;
+    height: 25px;
+}
+.market-allgood{
+    float: left;
+    width: 235px;
+    height: 618px;
+    position: relative;
+}
+.market-goods{
+    width: 235px;
+    height: 618px; 
+    position: relative;
+}
+.market-maotai{
+    display: block;
+    width: 235px;
+    height: 618px;  
+}
+.market-maotai:hover{
+    opacity: 0.8;
+}
+.market-title{
+    position: absolute;
+    top: 430px;
+    left: 0px;
+    float: left;
+}
+.market-titleleft{
+    background: rgba(0,0,0,.9);
+    width: 70px;
+    height: 64px;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.left-title{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 24px;
+    font-size: 18px;
+    width: 36px;
+    font-weight: 500;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+    overflow: hidden
+}
+.market-titleright{
+    left: 70px;
+    top: 0;
+    position: absolute;
+    background: rgba(0,0,0,.6);
+    overflow: hidden;
+    width: 128px;
+    height: 64px;
+    color: #FFF;
+    vertical-align: middle;
+}
+.market-titleright .right-title{
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 8px;
+    margin-left: 20px;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+}
+.right-title1{
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 20px;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+}
+.bigmore{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    font-size: xx-large;
+    color: #fff;
+}
+.market-goods1{
+    width: 995px;
+    height: 618px;
+    float: left;
+    overflow: hidden;
+}
+.market-goods1-1{
+    float: left;
+    width: 484px;
+    height: 301px;
+    margin-left: 13px;
+    background: #000;
+}
+.market-goods1-all{
+    float: left;
+}
+.market-goods2:hover{
+    opacity: 0.6;
+   border: 1px solid #ff0036; 
+}
+.market-good1-all1{
+    margin-top: 16px;
+}
+.market-goods2{
+    float: left;
+    width: 235px;
+    height: 301px;
+    margin-left: 13px;
+    text-align: center;
+    background: #ffffff;
+}
+.market-goods1-img1{
+    margin-top: 25px;
+    width: 185px;
+    height: 185px;
+}
+.market-goods1-name{
+    
+    width: 135px;
+    height: 40px;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    overflow: hidden;
+    margin: 8px auto;
+    display: block;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+}
+.market-goods1-price{
+    font-size: 18px;
+    color: #FF0036;
+    line-height: 18px;
+    margin: 10px auto;
+    display: block;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
 }
