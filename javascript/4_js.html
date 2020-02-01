@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+#container{
+    width: 750px;
+    height: 291px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+.img-box{
+    width: 3750px;
+    position: relative;
+    transition: left 1s ease;
+}
+.img-box li{
+   float: left;
+}
+.btn-box{
+    position: absolute;
+    right:10px;
+    bottom: 10px;  
+}
+.arrow-box{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.btn-box li,.arrow-box li{
+    float: left;
+    background: rgba(0,0 ,0 , 0.5);
+    color: #ffffff;
+    margin-left: 1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.btn-box .active{
+    background: #ff0036;
+}
+</style>
+</head>
+
+<body>
+    <div id="container">
+        <ul class="img-box">
+            <li class="selected">
+                <img src="../images/lunbo_1.jpg " alt="">
+            </li>
+            <li>
+                <img src="../images/lunbo_2.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/lunbo_3.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/lunbo_4.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/lunbo_5.jpg" alt="">
+            </li>
+        </ul>
+        <ul class="btn-box">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul class="arrow-box">
+            <li id="prev-btn">&lt;</li>
+            <li id="next-btn">&gt;</li>
+        </ul>
+    </div>
+<script>
+     var btnBox = document.getElementsByClassName("btn-box")[0];
+        var aBtn = btnBox.getElementsByTagName("li");
+        var oImgBox = document.getElementsByClassName("img-box")[0];
+        
+        for(var i=0; i<aBtn.length; i++){
+            aBtn[i].index = i;
+            aBtn[i].onclick = function(){
+                for(var j=0; j<aBtn.length; j++){
+                    aBtn[j].className = "";
+                }
+                
+                this.className =  "active";
+                oImgBox.style.left = -this.index*750+"px";
+            }
+        }
+    
+</script>
+</body>
+</html>

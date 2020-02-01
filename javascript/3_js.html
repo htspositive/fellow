@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+    .container{
+        overflow: hidden;
+        height: 1000px;
+        width:1500px;
+    }
+    .image_all{
+        overflow: hidden;
+    }
+    .image_all li{
+        width: 600px;
+        height: 400px;
+        float: left;
+        display: block;
+    }
+    .image_button{
+        float: left;
+        background: rgba(0, 0, 0, 0.7);
+        margin-left: 5px;
+        color: #ffffff;
+    }
+    .image_active{
+        background:#ff0036;
+        margin-left: 5px;
+        color: #ffffff;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul class="image_all">
+        <li><img class="image" src="../images/year-good3.png" alt=""></li>
+        <li><img class="image" src="../images/1.jpg" alt=""></li>
+    </ul>
+    <ul class="image_button">
+        <li class="image_active">1</li>
+        <li>2</li>
+    </ul>
+</div>
+</body>
+</html>

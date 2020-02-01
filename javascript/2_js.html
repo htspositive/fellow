@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 750px;
+            margin:50px auto;
+            position: relative;
+        }
+        .img-box li{
+            display: none;
+        }
+        .img-box img{
+            display: block;
+        }
+        .img-box .selected{
+            display: block;
+        }
+        .btn-box{
+            position: absolute;
+            right:10px;
+            bottom:10px;
+        }
+        .btn-box li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(0,0,0,0.5);
+            color:#fff;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer; /*鼠标滑过手状*/
+        }
+        .btn-box .active{
+            background: #ff0036;
+        }
+        .arrow-box{
+            position: absolute;
+            left:10px;
+            bottom:10px;
+        }
+        .arrow-box li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <!-- <script>
+        window.onload = function(){ //页面中所有的资源都加载完再执行
+            var oContainer = document.getElementById("container"); //null
+            console.log(oContainer)
+        }   
+    </script> -->
+</head>
+<body>
+    <div id="container">
+        <ul class="img-box">
+            <li class="selected">
+                <img src="../images/lunbo_1.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/lunbo_2.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/lunbo_3.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/lunbo_4.jpg" alt="">
+            </li>
+            <li>
+                <img src="../images/lunbo_5.jpg" alt="">
+            </li>
+        </ul>
+        <ul class="btn-box">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul class="arrow-box">
+            <li id="prev-btn">&lt;</li>
+            <li id="next-btn">&gt;</li>
+        </ul>
+    </div>
+    <script>
+        var oContainer = document.getElementById('container');
+
+        var btnBox = document.getElementsByClassName('btn-box')[0];//[]
+        // btnBox[0]
+        var aBtn = btnBox.getElementsByTagName('li');
+        var imgBox = document.getElementsByClassName('img-box')[0];
+        var aImg = imgBox.getElementsByTagName('li');
+        var oNext = document.getElementById('next-btn');
+        var oPrev = document.getElementById('prev-btn');
+        var iNow = 0;
+
+        for(var i=0; i<aBtn.length; i++){
+            aBtn[i].index = i;
+            aBtn[i].onclick = function(){
+                // for(var j=0; j<aBtn.length;j++){
+                //     aBtn[j].className ="";
+                //     aImg[j].className ="";
+                // }
+                // aBtn[this.index].className = "active";
+                // // this.className = "active";
+                // aImg[this.index].className = "selected";
+                change(this.index);
+                iNow = this.index;
+            }
+        }
+        oNext.onclick = function(){
+            iNow++;
+            if(iNow > aBtn.length-1){
+                iNow = 0;
+            }
+            // 索引为iNow 的按钮红色 
+            change(iNow);
+        }
+
+        oPrev.onclick = function(){
+            iNow--;
+            if(iNow < 0){
+                iNow = aBtn.length-1;
+            }
+            // 索引为iNow 的按钮红色 
+            change(iNow);
+        }
+        // 显示索引为参数的图片和按钮
+        function change(idx){
+            for(var i=0; i<aBtn.length; i++){
+                aBtn[i].className = "";
+                aImg[i].className = "";
+            }
+            aBtn[idx].className = "active";
+            aImg[idx].className = "selected";
+        }
+
+        var timer = setInterval(function(){
+            oNext.onclick();
+        },2000);
+
+        oContainer.onmouseover = function(){
+            clearInterval(timer);
+        }
+        oContainer.onmouseout = function(){
+            // 局部
+            timer = setInterval(function(){
+                oNext.onclick();
+            },2000);
+        }
+
+
+    </script>
+
+
+    
+
+</body>
+</html>
