@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">hhhhhhh
+        <p id="p1">asdjflasdfjkladsjf</p>
+        <p id="p2">zczczczascxcbcxcxcxcxc</p>
+    </div>
+<script>
+ var oDiv = document.getElementById("div1");
+ //createElement 创建h2  必须插入到元素中 然后才能显示
+ var oH2 = document.createElement("h2");
+ oH2.innerHTML = "hhhhhahahahahahahahahah";
+
+//appendChild 插入到div1中   插入到父元素内部的后边
+oDiv.appendChild(oH2);
+
+// removeChild 删除节点 通过父元素删除子元素
+var oP1 = document.getElementById("p1");
+oDiv.removeChild(oP1);
+
+// removeChild （new old） 替换
+var oP2 = document.getElementById("p2");
+oDiv.replaceChild(oH2,oP2);
+
+// insertChild(new refnode) 插入   某个节点之前插入
+oDiv.insertBefore(oH2,oP2);
+
+// cloneNode 克隆  使用参数true表示克隆节点时包含子节点
+var oP2 = oP1.cloneNode(true);
+oDiv.appendChild(oP2);
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+
+</style>
+</head>
+<body>
+    <div id="div1">
+        哈哈哈哈哈
+    </div>
+    <h2>heheheh</h2>
+    <ul id="ul1">
+        <li>111</li>
+        <li id="li2">222</li>
+    </ul>
+    <script>
+    var oDiv1=document.getElementById("div1");
+    function next(elem){
+        do{
+            elem=elem.nextSibling;
+        }while(elem.nodeType !=1)//如果下一个（elem）的节点类型不是元素节点
+        return elem;
+    }
+    // console.log( next(oDiv1) );
+    var oUl1=document.getElementById("ul1");
+    function first(elem){
+     elem = elem.firstChild;
+     if(elem.nodeType!=1){
+         elem = next(elem);
+     }
+     return elem;
+    }
+    first(oUl1);
+    console.log(first(oUl1));
+
+    </script>
+</body>
+</html>
