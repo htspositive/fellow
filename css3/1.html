@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        -webkit-transform: 5px;
+        -moz-transform: 5px;
+        -ms-transform: 5px;
+        -o-transform: 5px;
+        transform:5px;
+    }
+    #div1{
+            width: 200px;
+            height: 200px;
+            border:1px solid #000;
+            border-radius: 10px;
+             /* 水平偏移  垂直偏移  模糊度  外延值  颜色  */
+            box-shadow: 5px 4px 5px 3px rgba(0,0,0,0.5);
+    }
+    ul{
+        list-style: none;
+    }
+    li[id="li1"]{
+     background:red;
+    }
+    li:nth-child(2){
+     background:rgba(0, 0, 0, 0.5);
+    }
+    #div1 li:first-of-type{
+     background: rgba(255,0,0,0.5);
+    }
+    input:checked + span{
+     background: rgba(0, 0, 0, 0.5);
+    }
+    #div1::after{
+     content: "999999999999999999";
+    }
+    #li2{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1">555
+        <ul>555
+            <li>
+                444 wuzhongshengyou
+            </li>
+            <li >333
+                <input type="radio" name="color"><span>黑黑</span>
+                <input type="radio" name="color"><span>白白</span>
+                <li id="li2">22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+                    <li id="li1">
+                        111
+                    </li>
+                </li>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

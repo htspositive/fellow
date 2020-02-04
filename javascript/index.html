@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    img{
+        position: absolute;
+    }
+    </style>
+</head>
+<body>
+    <script>
+    //取屏幕宽度
+    var screenWidth = document.documentElement.clientWidth|| document.body.clientWidth;
+    //取屏幕高度
+    var screenHeigt = document.documentElement.clientHeight || document.body.clientHeight;
+        
+    function Leaf(){
+        this.width = Math.random()*50+200;
+        this.pos ={
+            left:Math.random()*(screenWidth-this.width), //0 - (screenWidth-this.width)
+            top:0
+        }
+        this.speed = 5; 
+        //创建一个图片DOM 元素   添加src 1 - 4张中的某一个
+        var oImg = new Image();//创建图片
+        oImg.src="../images/lunbo_"+ (Math.floor( Math.random()*4)+1)+".jpg" //  1-4随机选一个图
+        oImg.style.width = this.width+"px";
+        oImg.style.left = this.pos.left+"px";
+        oImg.style.top = this.pos.top+"px";
+        this.img = oImg;
+      
+    }
+    //初始化的方法 ->将叶子插入到页面中
+    Leaf.prototype.init = function(){
+        document.body.appendChild(this.img);
+    }
+    Leaf.prototype.fall = function(){
+        //使用定时器将叶子的TOP 值增加
+        //this.img.style.top
+
+        setInterval( function()  {
+        //取到当前的top+speed
+        this.img.style.top =this.img.offsetTop + this.speed + "px" ;
+
+         }.bind(this), 10);
+    }
+    // var left1 = new leaf();
+    // left1.init();
+    // left1.fall();
+    //多个叶子
+    var leafs = [];
+    for ( var i=0;i<10;i++){
+        var leaf = new Leaf();
+        leafs.push(leaf);
+        leaf.init();
+    }
+    document.onclick = function(){  
+        //想让所有叶子调用fall
+        for(var j = 0; j <leafs.length;j++){
+            leafs[j].fall();
+        }
+    }
+    </script>
+</body>
+</html>
