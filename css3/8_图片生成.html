@@ -14,9 +14,6 @@
        background: url(img/bg.jpg);
     }
     .item{
-
-
-        
             width: 125px;
             height: 125px;
             border:5px solid #fff;
@@ -43,12 +40,10 @@
         }
             count++;
         }
-        oImg.src = "img/thumbs/"+(i+1)+".jpg";
-       
+        oImg.src = "img/thumbs/"+(i+1)+".jpg";  
     }
     function loadSuccess(){
         var index = 0;
-    
         for(var i=0;i<4;i++){
             for(var j=0;j<6;j++){
                 var oDiv = document.createElement("div");
