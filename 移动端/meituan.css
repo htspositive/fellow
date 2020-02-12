@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-size: 0.24rem;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
+    background-color: #f0efed;
+}
+header{
+    display: flex;
+    height: 1.01rem;
+    background: #ffc000;
+}
+.header-icon{
+    display: block;
+    width:.98rem;
+    text-align: center;
+    line-height: 1.01rem;
+}
+.header-city{
+    width: 1.8rem;
+    color: #222222;
+    font-size: 0.28rem;
+    font-family: PingFangSC-Medium;
+    text-align: center;
+    line-height: 1.01rem;
+    display: inline-block;
+}
+.header-search{
+    width: 3.62rem;
+    height: 0.64rem;
+    opacity: 0.9;
+    border-radius: 0.1rem;
+    color: #999999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 0.2rem;
+    padding-left: 0.35rem;
+    line-height: 0.64rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    background:#FFFFFF url(https://p0.meituan.net/travelcube/99c29829cf1b85d5cdbc76a1bd0b7329814.png) 0 0.18rem no-repeat;
+    background-size: 0.28rem 0.28rem;
+}
+.two{
+    display: flex;
+    background: #000000;
+    height: 1.04rem;
+    position: relative;
+    overflow: hidden;
+}
+.two-item{
+    display: flex;
+    padding: 0.16rem 0 0.16rem 0.3rem;
+}
+.img-box{
+    display: block;
+    width: 0.72rem;
+    height:0.72rem;
+}
+.img-box img{
+    vertical-align: middle;
+    border:0;
+}
+.logo{
+    padding-left: 0.2rem;
+    color:#FFF;
+}
+.to-app-btn{
+    position: absolute;
+    right: 0.29rem;
+    top: 0.22rem;
+    width: 1.1rem;
+    height: 0.6rem;
+    background-image: linear-gradient(135deg, #FFD000 0%, #FFBD00 100%);
+    border-radius: 0.14rem;
+    line-height: 0.6rem;
+    text-align: center;
+}
+.logo-tit{
+    font-size: 0.26rem;
+    padding-top: 0.07rem;
+}
+.logo-desc{
+    font-size: 0.22rem;
+    font-weight: 300;
+    padding-top: 0.07rem;
+}
+.icon-list{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd8ce;
+    box-sizing: border-box;
+    background: #FFFFFF;
+}
+.icon{
+    width: 20%;
+    height: 1.62rem;
+    text-align: center;
+}
+.icon span{
+    display: block;
+    border-radius: 10rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    text-align: center;
+    line-height: 0.8rem;
+    margin: .2rem auto 0 auto;
+    font-size: .5rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+.meishi{
+    background:#fd9d21 ;
+}
+.maoyan{
+    background:#ff6767 ;
+}
+.jiudian{
+    background: #8a90fa;
+}
+.xiuxian{
+    background: #fed030;
+}
+.waimai{
+    background: #fd9d21;
+}
+.KTV{
+    background: #fed030;
+}
+.zhoubianyou{
+    background: #4dc6ee;
+}
+.liren{
+    background: #ff80c2;
+}
+.xiaochi{
+    background: #fd9d21;
+}
+.gengduo{
+    background: #00d3be;
+}
+.icon p{
+    font-size: .24rem;
+    color: #666;
+    margin-top: .14rem;
+}
+.guessyou-box{
+    margin-top: .24rem;
+    padding-left:.2rem ;
+    background-color: #FFFFFF;
+    border-top: 1px solid #ddd8ce;
+    border-bottom: 1px solid #DDD8CE;
+}
+.guess-box li{
+    border-top: 1px solid #ddd8ce;
+}
+.guessyoulike{
+    font-size: .34rem;
+    height: .83rem;
+    line-height: .83rem;
+    color: #333;
+    font-weight: normal;
+}
+.guess-list{
+    display: flex;
+    color: #666;
+    text-decoration: none;
+    padding-top: .28rem;
+    padding-bottom: .28rem;
+    padding-right: .2rem;
+}
+.guess-list img{
+    width:1.8rem ;
+    height: 1.8rem;
+    margin-right: .2rem;
+}
+.guess-info{
+    flex: 1;
+    position: relative;
+}
+.p1{
+    padding-top: .1rem;
+    margin-bottom: .12rem;
+    font-size: .3rem;
+    font-weight: 400;
+    color: #333;
+}
+.p2{
+    font-size: .24rem;
+    height: .68rem;
+    margin-bottom: .16rem;
+    color: #666;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.span1{
+    font-size: .36rem;
+    color: #F60;
+}
+.span2{
+    font-size: .24rem;
+    color: #F60;
+}
+.span3{
+    font-size: .24rem;
+}
+.span4{
+    position: absolute;
+    bottom: .13rem;
+    right: 0;
+    font-size: .24rem;
+    vertical-align: sub;
+}
