@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //原版
+    let name = 'zhsnagsd';
+    let obj={
+        name:name,
+        age:20,
+        say:function(){
+            console.log('hhh')
+        }
+
+    }
+    let x = "xx" 
+    //属性名和属性值变量同名的时候
+    let obj1 = {
+        [x]:'jjjj',//属性名是变量的时候用中括号
+        name,//属性简写
+        age:20,
+        say(){//对象方法的简写方式
+            console.log('hhh')
+        }
+    }
+    console.log(obj1.say())
+
+    let obj = {
+            name:'zs',
+            age:20,
+            school:'weichuang'
+        }
+    let obj2 = {
+        height:30,
+        tall:3333,
+    }
+    //合并对象
+    let obj3 = {...obj,...obj2};
+    let obj4= Object.assign(obj,obj2);
+    console.log(obj3);
+    console.log(obj4);
+
+    let obj5 = {
+        name:'nansnns',
+        age:20
+    }
+
+    for(key in obj5){
+        console.log(obj5[key]);
+    }
+    
+    console.log(Object.key(obj5));//["name","age"]
+    console.log(Object.values(obj5));//["zhangsan",20]
+    console.log(Object.entries(obj5));//[["name","zhangsan"],["age",20]]
+    console.log('age' in obj5);
+    </script>
+</body>
+</html>

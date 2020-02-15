@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>2222</li>
+    <script>
+    //find 查找第一个符合条件的成员
+    let arr3= [5,34,4,4,4,4,5,2];
+    arr3.find(function(val,index){
+        return val>8;
+    });
+    console.log(num);
+
+    //includes 判断数组是否包含
+    let arr = [1,2,3,4,5,6,7];
+    console.log(arr.includes(8));
+
+    //Array.from 类数组转换成数组
+    let aLi = document.getElementsByTagName('li');
+    Array.from(aLi);
+
+    // for of 循环
+    let arr4=[5,4,3,2,2,1];
+    for(val of arr4){//属性值
+        console.log(val)
+    }
+    for(val of arr4.keys()){//属性索引
+        console.log(val)
+    }
+    for([index,val] of arr4.entries()){//属性索引和值
+        console.log(index,val);
+    }
+
+    //forEach循环
+    let arr5 = [5,4,2,3,7,9,6,5]
+    arr5.forEach(function(val,index){
+        console.log(val,index);
+    })
+
+    //filter过滤出符合条件的成员 返回一个数组
+    let arr6 = [5,6,8,90,0,8,6,3];
+    arr6.filter(function(val,index){
+        return val>5;
+    });
+
+    //map 映射出符合条件的新数组
+    let arr7 = [6,5,5,34,3,5,6,7]
+    var arr8=arr7.map(function(val,index)
+    {
+        return val*2;
+    })
+    console.log(arr8);
+
+    </script>
+    </ul>
+</body>
+</html>

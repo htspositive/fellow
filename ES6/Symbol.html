@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // sting number boolean null undefined Symbol  基本数据类型
+
+        //array object  复合数据类型
+
+        //生成一个独一无二的值 不会重复
+    let a = Symbol('a');
+    let b = Symbol('b');
+    console.log(a,b);
+
+    let obj = {
+        name:'sss',
+        [b]:'bbb',
+        [Symbol()]:'bbbbbbbb'
+    }
+    //Symbol 类型属性 该属性不会出现在for...in循环中
+    for(key in obj){
+        console.log(key);
+    }
+
+
+    </script>
+</body>
+</html>
