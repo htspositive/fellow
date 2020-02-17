@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Set 类似于数组 但是成员的值都是唯一的，没有重复的值。
+    //
+    //数组去重第一种方式
+    let arr =[1,2,3,4,5,6,7,8,8,8,8,8,9];
+    let arr2 = new Set(arr);
+    //let arr3  = [...arr2];
+    let arr3 = Array.from(arr2);
+    
+    //数组去重第二种方式
+    function fn(arr){
+        let obj={};
+        var result = [];
+        for(var i=0;i<arr.length;i++){
+            if(!obj[arr[i]]){
+                obj[arr[i]] =1;//obj.1=1 如果第一个数没值就让第一个为1
+                result.push(arr[i]);
+            }else{
+                obj[arr[i]]++;//计数
+            }
+            
+        }
+    }
+    let arr =[1,2,3,4,5,6,7,8,9];
+    console.log(fn(arr));
+    </script>
+</body>
+</html>

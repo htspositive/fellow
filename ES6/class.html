@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    class Person{
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        //添加方法
+        say(){
+            console.log('hahdfhasf')
+        }
+        //添加静态方法  添加到类
+        static xx(){
+            console.log('xxxxxx')
+        }
+    }
+
+    let p1= new Person('sjadf',20);
+    p1.say();
+    Person.xx();
+
+    var arr = [1,2,3,4]; 
+    var arr = new Array();//Array 构造函数
+    arr.push();
+    //类下的方法  静态的
+    Array.isArray() ;
+
+    
+    class Coder extends Person{
+        constructor(name,age){
+            super(name,age)
+            this.shirt = 'chenshan';
+        }
+        coding(){
+            console.log('wozangsdfasdf')
+        }
+    }
+    let c1 = new Coder('wade',18);
+    console.log(c1);
+    c1.say();
+    c1.coding();
+    </script>
+</body>
+</html>
