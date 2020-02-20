@@ -2,15 +2,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const output = require("./webpack.output.js");
 module.exports = {
     // 入口文件 
     entry:"./src/index.js",
     // 出口文件 打包到哪
-    output:{
-        filename:"bundle.js",
-        // path是绝对路径 
-        path:path.resolve(__dirname,"dist")
-    },
+    output:output,
     module:{
         rules:[
             {
@@ -52,11 +49,13 @@ module.exports = {
             template:"./src/index.html"
         }),
         // 打包之前先将dist目录删除
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin.BannerPlugin("何天时！！！！")
     ],
     devServer:{
         contentBase:path.resolve(__dirname,"dist"),
         host:'localhost',
+        open:true
         // port:
     }
 }
