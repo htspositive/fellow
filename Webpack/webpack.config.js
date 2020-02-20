@@ -17,11 +17,7 @@ module.exports = {
                 test:/\.(jpg|png|gif)$/,
                 use:{
                     loader:'url-loader',
-                    options:{
-                        outputPath:'images/',
-                        limit:100,
-                        name:'[name].[ext]'
-                    }
+                    
                 }
             },
             {
@@ -39,6 +35,14 @@ module.exports = {
                     "postcss-loader",
                     "sass-loader"
                 ]
+            },
+            {
+                test:/\.js$/,
+                loader:"babel-loader",
+                options:{
+                    presets:["@babel/preset-env"]
+                },
+                exclude:/node_modules/
             }
         ]
     },
