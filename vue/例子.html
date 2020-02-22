@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-.red{
+.bianse{
     background: red;
 }
 
@@ -18,7 +18,7 @@
     <ul>
         <li v-for="(obj,index) in list"
             @click="fn(obj)"
-            :class="{red:obj.isChecked}">{{obj.name}}   
+            :class="{bianse:obj.isChecked}">{{obj.name}}   
             <button @click.stop="remove(index)">del</button>
         </li>
     </ul>
@@ -32,19 +32,23 @@
             data:{
                 list:[
                     {
-                        name:"詹姆斯哈登",
+                        name:"詹姆斯^哈登",
                         isChecked:false
                     },
                     {
-                        name:"德文恩韦德",
+                        name:"德文恩^韦德",
                         isChecked:false
                     },
                     {
-                        name:"科比布莱恩特",
+                        name:"科比^布莱恩特",
                         isChecked:false
-                    }
+                    },
+                    {
+                        name:"勒布朗^詹姆斯",
+                        isChecked:false
+                    },
                 ],
-                MyValue:""
+                MyValue:"",
             },
             methods:{
                 add(){
