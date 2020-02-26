@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #aaa{
+            width: 500px;
+            margin:0 auto;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .right{
+            float: right;
+        }
+        .bianse{
+            background: red;
+        }
+    
+        </style>
+    </head>
+    <body>
+        <div id="aaa">
+            <h2>todolist</h2>
+            <hr>
+            <div>
+                名称：<input type="text" v-model="addname" placeholder="请输入商品名称">
+                价格：<input type="number" v-model="addprice" placeholder="请输入商品价格">
+                <button @click="add()">添加</button>
+            </div>
+            <div>
+                <input type="text">
+                <button>搜索</button>
+            </div>
+            <ul>
+                <li v-for="(obj,index) in list"
+                    @click="change(obj)"
+                    :class="{bianse:obj.isChecked}"
+                >
+                    <input type="checkbox" v-model="obj.isChecked">
+                    <span>{{obj.name}}</span>
+                    <div class="right">
+                        <span>{{obj.price}}</span>
+                        <span @click.stop="remove()">[X]</span>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <button>删除</button>
+                <span>总价888</span>
+            </div>
+    
+        </div>
+        <script src="vue.js"></script>
+        <script>
+            new Vue({
+                el:"#aaa",
+                data:{
+                    list:[
+                       {
+                           name:"韦德之道7代",
+                           price:"1999",
+                           isChecked:false
+                       } ,
+                       {
+                           name:"詹姆斯15代",
+                           price:"1877",
+                           isChecked:false
+                       } ,
+                       {
+                           name:"欧文2代",
+                           price:"999",
+                           isChecked:false
+                       } 
+    
+                    ]
+                },
+                methods:{
+                    add(){
+                        this.list.push({
+                            name:this.addname,
+                            price:this.addprice
+                        })
+                        this.addname="";
+                        this.addprice="";
+                    },
+                    change(obj){
+                    obj.isChecked= !obj.isChecked;
+                    },
+                    remove(index){
+                    this.list.splice(index,1);
+                }
+                }
+            })
+    
+        </script>
+</body>
+</html>
