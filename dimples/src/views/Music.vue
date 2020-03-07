@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img v-for="obj in WadeList" :key="obj.id" :src="obj.bg" @click="$router.push({path:'/WadeDetail',query:{id}})" alt="">
+        <img v-for="obj in WadeList" :key="obj.id" :src="obj.bg" @click="$router.push({path:'/MusicDetail',query:{id}})" alt="">
     </div>
 </template>
 

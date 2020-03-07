@@ -37,7 +37,7 @@ import axios from 'axios';
         },
         methods:{
             goDetail(id){
-                this.$router.push({path:'/JamesDetail',query:{id}})
+                this.$router.push({path:'/MoviesDetail',query:{id}})
             }
         }
     }
