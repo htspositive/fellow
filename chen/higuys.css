@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration:none;
+}
+body{
+    font-size: 0.24rem;
+    color: #333333;
+    font-family:  "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    background-color: #f0f0f0;
+}
+.fenjiexian{
+    margin-left: 0.55rem;
+    opacity: 0.1;
+}
+/* 标题 */
+.header-title p{
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 0.4rem;
+    margin-top: 0.2rem;
+}
+.header-two{
+    display: flex;
+    margin-top: 0.2rem;
+    margin-left: 0.4rem;
+}   
+.search{
+    width: 90%;            
+    display: flex;
+}
+.search input{
+    float: left;
+    flex: 4;
+    height: 30px;
+    outline: none;
+    border: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.search button{
+    float: right;
+    flex: 1;
+    height: 30px;
+    background-color:#696969;
+    color: white;
+    border-style: none;
+    outline: none;
+}
+.search button i{
+    font-style: normal;
+}
+.search button:hover{
+    font-size: 16px;
+}
+/* 图标分类 */
+.category{
+    margin-top: 0.2rem;
+    overflow: hidden;
+}
+.category-list{
+    float: left;
+    width: 30%;
+    margin-top: 0.2rem;
+    margin-left:0.15rem;
+}
+.category-list-div img{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 0.25rem;  
+}
+.category-list-div{
+    text-align: center;
+    width: 1.5rem;
+    height: 1.7rem;
+    margin-left: 0.2rem;
+  
+}
+.pictures-title{
+    margin-top: 2rem;
+}
+/* 点击水波纹放大效果 */
+.ripple {
+    position: relative;
+    /* overflow:hidden */ 
+    }
+    .ripple:focus{
+    outline: none;
+    }
+    .ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    pointer-events: none;
+    background-color: #888;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 0;
+    transition: all .3s;
+    }
+    .ripple:active:after {
+    opacity: .3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0s;
+    }
+    .ripple:hover{
+    color: tomato;
+    }
+/* 最新  标题*/
+.hotnews{
+    margin-top: 0.4rem;
+    overflow: hidden;
+}
+.p1{
+    margin-left: 0.45rem;
+    font-size: large;
+    font-weight:600;
+    float: left;
+}
+.p2{
+    position: absolute;
+    font-size: x-small;
+    margin-top: 0.05rem;
+    right: 0.5rem;
+    opacity: 0.5;
+    font-weight:500;
+}
+/* 内容 */
+.content{
+    margin-top: 0.2rem;
+    overflow: hidden;
+}
+.content img{
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.content img:hover{
+    transform: scale(1.2,1.2);
+} 
+/* 左侧div */
+.content-left{
+    width: 42%;
+    float: left;
+    margin-left: 0.2rem;
+}
+/* 右侧div */
+.content-right{
+    margin-left: 0.4rem;
+    width:42%;
+    float: left;
+}
+/* 小照片 */
+.content-short{
+    position: relative;
+    /* transition: all 0.6s; */
+}
+/* .content-short:hover{
+    transform: scale(1.2,1.2);
+} */
+/* 大照片 */
+.content-long{
+    position: relative;
+    /* transition: all 0.6s; */
+}
+/* .content-long:hover{
+    transform: scale(1.2,1.2);
+} */
+.content-short img{
+    width: 100%;
+    height: 3rem;
+}
+.content-long img{
+    width:100%;
+    height:4.5rem;
+}
+.longup{
+    margin-top: 0.4rem;
+}
+.divup{
+    margin-top: 0.4rem;
+}
+/* 图片覆盖框 */
+.pictures-div{
+    position: absolute;
+    bottom: 0.4rem;
+    left: 0.2rem;
+}
+.pictures-name{
+    font-size: 0.4rem;
+    color: white;
+}
+.pictures-pingjia{
+    margin-left: 0.07rem;
+    margin-top: 0.06rem;
+    overflow: hidden;
+    width: 0.9rem;
+    height: 0.3rem;
+    background:rgba(255,255,255,0.5);
+    border-radius: 0.1rem;
+    font-size: x-small;
+    text-align: center;
+    line-height: 0.3rem;
+    color: #ffff;
+}
+.pictures-pingjia span{
+    margin-left: 0.15rem;
+    float: left;
+    font-weight: 700;
+}
+.pictures-pingjia p{
+    margin-left: 0.15rem;
+    float: left;
+}
+/* 底部栏 */
+.footer{
+    background-color: #fcfcfc;
+    border-radius: 0.3rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+}
+.footer-1{
+    float: left;
+    width: 25%;
+    height: 1rem;
+}
+.footer-1 p{
+    font-size: 0.3rem;
+    margin-left: 0.5rem;
+    color: tomato;
+}
+.footer-1 span{
+    font-size: 0.5rem;
+    margin-left: 0.6rem;
+}
+.footer-1 span:hover{
+    color: tomato;
+}
+.footer-1 p:hover{
+    color: tomato;
+}
+/* 底部留白 */
+.footer-space{
+    width: 100%;
+    height: 49px;
+}
+
+
+

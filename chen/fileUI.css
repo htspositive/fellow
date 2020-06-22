@@ -1,0 +1,137 @@
+.header-two{
+    display: flex;
+    margin-top: 0.2rem;
+    margin-left: 0.4rem;
+}   
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration:none;
+}
+body{
+    font-size: 0.24rem;
+    color: #333333;
+    font-family:  "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    background-color: #f0f0f0;
+}
+.header-title p{
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 0.4rem;
+    margin-top: 0.2rem;
+}
+.header-two{
+    display: flex;
+    margin-top: 0.2rem;
+    margin-left: 0.4rem;
+}   
+.search{
+    width: 90%;            
+    display: flex;
+}
+.search input{
+    float: left;
+    flex: 4;
+    height: 30px;
+    outline: none;
+    border: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.search button{
+    float: right;
+    flex: 1;
+    height: 30px;
+    background-color:#696969;
+    color: white;
+    border-style: none;
+    outline: none;
+}
+.search button i{
+    font-style: normal;
+}
+.search button:hover{
+    font-size: 16px;
+}
+.category{
+    margin-top: 0.4rem;
+}
+.file{
+    margin-top: 0.1rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    background-color: #ffff;
+    height: 1.7rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.file img{
+    float: left;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 30%;
+    margin-left: 0.2rem;
+    margin-top: 0.3rem;
+}
+.file_words{
+    float: left;
+    margin-left: 0.1rem;
+}
+.words_one{
+    font-weight: 800;
+    font-size: 13px;
+    position: absolute;
+    top: 0.2rem;
+    left: 1.4rem;
+}
+.words_two{
+    position: absolute;
+    bottom: 0.3rem;
+    left: 1.4rem;
+    color: #878383;
+}
+.share{
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0.3rem;
+}
+/* 底部栏 */
+.footer{
+    background-color: #fcfcfc;
+    border-radius: 0.3rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+}
+.footer-1{
+    float: left;
+    width: 25%;
+    height: 1rem;
+}
+.footer-1 p{
+    font-size: 0.3rem;
+    margin-left: 0.5rem;
+}
+.footer-1 span{
+    font-size: 0.5rem;
+    margin-left: 0.6rem;
+}
+.footer-1 span:hover{
+    color: tomato;
+}
+.footer-1 p:hover{
+    color: tomato;
+}
+.footer-space{
+    width: 100%;
+    height: 49px;
+}
+.wenjian{
+    color: tomato;
+}

@@ -26,8 +26,4 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-size: 12px;
 }
-.container{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 </style>
