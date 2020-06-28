@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+        width: 200px;
+        height: 100px;
+        background: #000;
+    }
+    #div2{
+        width: 100px;
+        height: 50px;
+        background:#ffff;
+    }
+</style>
+<body>
+    <div>
+        arr.sort() 数组排序 默认字符串排序 比较首位
+        arr.sort(function(a,b){
+            return a - b;  //加个函数 比较a，b就可以实现从小到大排序
+        });
+        第二个里面写的是字符串 arr[{age:12},{age:13}]
+        arr.sort() 数组排序 默认字符串排序 比较首位
+        arr.sort(function(a,b){
+            return a.age - b.age;  //加个函数 比较a，b就可以实现从小到大排序
+        })    return的数字 三种情况 大于零 小于零 等于零 然后进行排序  可以return Math.random() - 0.5;随机排序
+    </div>
+    <div id="app">
+        <ul>
+            <li v-for="val in list">
+                {{val.name}}
+            </li>
+        </ul>
+        <button @click="fun(1)">{{msg}}</button>
+        <div id="div1" @click="click1()">
+            <div id="div2" @click.stop="click2()">
+
+            </div>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({        //@click="fun(1)" v-on的简写  :title="t"  v-bind的简写
+            el:'#app',
+            data:{
+                msg:1,
+                arr:[111,222,333],
+                list:[{
+                    name:'zs',
+                    age:14
+                },
+                {
+                    name:'ls',
+                    age:15
+                }]
+            },
+            methods:{
+                fun(a){
+                    this.msg +=a;
+                },
+                click1(){
+                    console.log(111);
+                },
+                click2(){
+                    console.log(222);
+            //      event.stopPropagation();//阻止冒泡行为 阻止事件传播   @click.stop="click2()"就可以了
+            //      event.preventDefault();//阻止默认行为
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>
